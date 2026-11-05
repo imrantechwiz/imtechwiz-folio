@@ -47,7 +47,7 @@ The contact form opens the visitor's mail client. To store messages, swap `submi
 ## Deploy (GitHub Pages)
 
 ```bash
-VITE_BASE=/Imtechwiz/ npm run build && npx gh-pages -d dist
+npm run deploy   # builds with base /imtechwiz-folio/ and pushes the gh-pages branch
 ```
 
 Root domain / Vercel / Netlify: plain `npm run build`, framework = Vite.
