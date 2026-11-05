@@ -3,6 +3,9 @@
    In `heroLines`, the entry with {serif: true} is the purple italic word.
    ============================================================ */
 
+/* Public asset paths are prefixed with the deploy base (e.g. /imtechwiz-folio/ on GitHub Pages) */
+const PUB = import.meta.env.BASE_URL;
+
 const PORTFOLIO = {
   /* ---------- Identity ---------- */
   name: "Imran Khan",
@@ -11,7 +14,7 @@ const PORTFOLIO = {
   initials: "IK",
   role: "Founding SDET",
   location: "Bengaluru, India",
-  cv: "/Imran_Khan_CV.pdf",
+  cv: `${PUB}Imran_Khan_CV.pdf`,
 
   /* Hero: line 1 "BREAKING things", line 2 "ON PURPOSE." — {serif:true} = purple italic word */
   heroLines: [
@@ -34,14 +37,14 @@ const PORTFOLIO = {
   companies: [
     {
       name: "OpenFX",
-      mark: "FX", logo: "/logos/openfx.svg",
+      mark: "FX", logo: `${PUB}logos/openfx.svg`,
       color: "#8c6ff7",
       sub: "Cross-border payments · 2026 — now",
       roles: [{ title: "Founding SDET", yr: "2026 —", note: "Test framework from zero: API, UI, E2E" }],
     },
     {
       name: "Harness",
-      mark: "H", logo: "/logos/harness.png",
+      mark: "H", logo: `${PUB}logos/harness.png`,
       color: "#f4f4f7",
       sub: "CI/CD platform · 2022 — 2026",
       roles: [
@@ -53,7 +56,7 @@ const PORTFOLIO = {
     },
     {
       name: "HighRadius",
-      mark: "HR", logo: "/logos/highradius.png",
+      mark: "HR", logo: `${PUB}logos/highradius.png`,
       color: "#4caf50",
       sub: "Fintech SaaS · 2022",
       roles: [{ title: "SWE Intern", yr: "2022", note: "Full-stack AI B2B app · React, Java, MySQL" }],
