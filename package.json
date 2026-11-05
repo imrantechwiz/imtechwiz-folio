@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build && cp dist/index.html dist/404.html",
     "preview": "vite preview",
-    "deploy": "VITE_BASE=/imtechwiz-folio/ npm run build && gh-pages -d dist -m \"Deploy to GitHub Pages\""
+    "deploy": "VITE_BASE=/imtechwiz-folio/ vite build --outDir dist-pages && cp dist-pages/index.html dist-pages/404.html && gh-pages -d dist-pages -m \"Deploy to GitHub Pages\""
   },
   "dependencies": {
     "framer-motion": "^11.11.9",
