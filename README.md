@@ -35,7 +35,7 @@ npm run preview  # serve the build
 | Component styles | `src/styles/components.css` |
 | Nav links | `components/Nav.jsx` (`LINKS`) + `App.jsx` (`ROUTES`) |
 | CV button | `public/Imran_Khan_CV.pdf` (path in `data.js → cv`) |
-| Photo | drop `me.jpg` in `public/`, replace the initials in the `.avatar` div in `pages/Home.jsx` |
+| Photo | `public/me.jpg` (square head-and-shoulders crop; path in `data.js → photo`, set `""` for initials) |
 
 ## Pages
 

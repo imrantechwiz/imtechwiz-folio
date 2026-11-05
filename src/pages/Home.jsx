@@ -49,8 +49,7 @@ export default function Home() {
 
           <motion.div className="hero-intro" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.65, ease: EASE }}>
             <div className="avatar">
-              {/* Replace with: <img src="/me.jpg" alt={DATA.name} /> after dropping me.jpg into /public */}
-              {DATA.initials}
+              {DATA.photo ? <img src={DATA.photo} alt={DATA.name} /> : DATA.initials}
             </div>
             <p>
               Hi! I'm <b>{DATA.name},</b> {DATA.heroIntro}

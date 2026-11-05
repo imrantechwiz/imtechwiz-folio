@@ -15,6 +15,7 @@ const PORTFOLIO = {
   role: "Founding SDET",
   location: "Bengaluru, India",
   cv: `${PUB}Imran_Khan_CV.pdf`,
+  photo: `${PUB}me.jpg`, // set to "" to fall back to initials
 
   /* Hero: line 1 "BREAKING things", line 2 "ON PURPOSE." — {serif:true} = purple italic word */
   heroLines: [
