@@ -1,0 +1,42 @@
+/* ============================================================
+   DESIGN TOKENS — playful, tactile, DARK. Purple + lime.
+   ============================================================ */
+
+:root {
+  --font-display: "Inter", -apple-system, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", "Times New Roman", serif;
+  --font-body: "IBM Plex Sans", "Inter", system-ui, sans-serif;
+
+  --bg: #111114;               /* page */
+  --bg-soft: #17132a;          /* deep lavender section (contact) */
+  --paper: #1b1b21;            /* cards */
+  --paper-2: #232330;
+  --ink: #f4f4f7;              /* headings */
+  --ink-2: #c3c3cc;            /* body */
+  --ink-3: #85858f;            /* muted */
+  --line: #ededf2;             /* card borders — light on dark */
+  --line-soft: #2c2c36;        /* subtle dividers */
+
+  --purple: #a48cff;
+  --purple-deep: #7b5cf5;
+  --lavender: #2a2342;         /* cube gaps, sticker fills */
+  --lavender-2: #6b54d6;       /* offset shadows */
+  --lavender-text: #c9b9ff;
+  --lime: #c8f542;
+  --lime-deep: #7ddc84;
+  --on-lime: #141414;
+
+  --radius: 20px;
+  --radius-sm: 12px;
+  --shadow-offset: 6px 6px 0 var(--lavender-2);
+  --shadow-offset-lg: 10px 10px 0 var(--lavender-2);
+
+  --container: 1240px;
+  --gutter: clamp(20px, 4vw, 48px);
+  --nav-h: 82px;
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  color-scheme: dark;
+}

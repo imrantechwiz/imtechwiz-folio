@@ -1,0 +1,181 @@
+/* ============================================================
+   BASE
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--ink-2);
+  line-height: 1.55;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+body.has-cursor,
+body.has-cursor a,
+body.has-cursor button {
+  cursor: none;
+}
+
+::selection {
+  background: var(--lime);
+  color: var(--ink);
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+}
+
+/* ---------- Type ---------- */
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+/* Giant uppercase display line, e.g. "BREAKING" */
+.display {
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: clamp(3.4rem, 11.5vw, 10.5rem);
+  line-height: 0.88;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+}
+
+/* The one purple italic serif word that crashes through the display line */
+.serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: -0.02em;
+  color: var(--purple);
+}
+.display .serif {
+  font-size: 1.22em;
+  line-height: 0.8;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  transform: translateY(0.06em);
+}
+
+/* Section heading: "Work *experience*" */
+.h-mixed {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.9rem, 3.6vw, 2.8rem);
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  line-height: 1;
+}
+.h-mixed .serif {
+  font-size: 1.2em;
+  color: var(--ink);
+  font-weight: 400;
+}
+.h-mixed .serif.p {
+  color: var(--purple);
+}
+
+.lede {
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+  line-height: 1.5;
+  color: var(--ink-2);
+  max-width: 44em;
+  text-wrap: pretty;
+}
+.small {
+  font-size: 0.85rem;
+  color: var(--ink-3);
+}
+.label {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.purple {
+  color: var(--purple);
+}
+.center {
+  text-align: center;
+}
+
+/* ---------- Layout ---------- */
+
+.container {
+  width: min(var(--container), 100% - var(--gutter) * 2);
+  margin-inline: auto;
+}
+main {
+  padding-top: var(--nav-h);
+  position: relative;
+  z-index: 1;
+}
+section {
+  padding-block: clamp(72px, 10vw, 140px);
+  position: relative;
+}
+.section-head {
+  text-align: center;
+  margin-bottom: clamp(36px, 5vw, 64px);
+}
+.section-head .lede {
+  margin: 18px auto 0;
+  text-align: center;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
